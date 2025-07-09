@@ -1,0 +1,8 @@
+.text-primary {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+}

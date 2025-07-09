@@ -1,0 +1,35 @@
+.side-links {
+  position: absolute;
+  margin-left: 30px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  padding: 0;
+  margin-top: 250px;
+}
+
+.icons li {
+  list-style: none;
+}
+
+.icons li a {
+  color: var(--color-gray);
+  transition: ease-in-out 0.2s;
+}
+
+.icons li a:hover {
+  color: var(--color-primary);
+}
+
+.side-links::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 230px;
+  background: var(--color-gray);
+  margin-left: 10px;
+}

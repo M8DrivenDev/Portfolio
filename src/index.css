@@ -1,0 +1,20 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #c778dd;
+  --color-gray: #abb2bf;
+  --color-bg: #282c33;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  margin: 0;
+  font-family: "Funnel Display", sans-serif;
+}
