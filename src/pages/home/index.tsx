@@ -1,6 +1,7 @@
 import Hero from "../../components/hero";
 import Navbar from "../../components/navbar";
 import SideLinks from "../../components/sideLinks";
+import "./index.css";
 
 const Home = () => {
   return (
