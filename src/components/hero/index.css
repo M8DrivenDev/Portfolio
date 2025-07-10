@@ -64,3 +64,39 @@
   background: var(--color-primary);
   margin: 0 10px;
 }
+
+@media screen and (max-width: 1024px) {
+  .hero-photo img {
+    width: 20rem;
+  }
+  .photo-logo img {
+    width: 150px;
+  }
+  .photo-logo img {
+    width: 150px;
+  }
+  .photo-logo {
+    left: -2.5rem;
+  }
+  .photo-status {
+    width: calc(100% - 35px);
+    margin-right: 10px;
+  }
+  .hero-text p {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .photo-logo {
+    left: 0rem;
+  }
+}

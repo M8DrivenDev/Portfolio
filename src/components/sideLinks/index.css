@@ -1,6 +1,6 @@
 .side-links {
   position: absolute;
-  margin-left: 30px;
+  margin-left: 2rem;
 }
 
 .icons {
@@ -32,4 +32,21 @@
   height: 230px;
   background: var(--color-gray);
   margin-left: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .side-links {
+    margin-left: 0.5rem;
+  }
+  .side-links::before {
+    height: 150px;
+  }
+  .icons {
+    margin-top: 170px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .side-links {
+    display: none;
+  }
 }
