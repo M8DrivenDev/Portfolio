@@ -1,21 +1,14 @@
 import "./App.css";
-import Navbar from "./components/navbar";
-import SideLinks from "./components/sideLinks";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/";
+import Contact from "./pages/contact/";
 
 function App() {
   return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
-        rel="stylesheet"
-      />
-      <div className="header">
-        <SideLinks />
-        <Navbar />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 }
 

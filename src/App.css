@@ -2,7 +2,18 @@
   color: var(--color-primary);
   font-weight: bold;
 }
+.text-white {
+  color: white;
+}
+.text-gray {
+  color: var(--color-gray);
+}
 
 .header {
   display: flex;
+}
+
+.container {
+  margin: 0 5rem;
+  padding: 0rem 1rem;
 }
