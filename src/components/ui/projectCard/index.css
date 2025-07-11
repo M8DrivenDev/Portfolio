@@ -1,0 +1,32 @@
+.project-card-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 1px var(--color-gray);
+  width: 300px;
+  height: fit-content;
+}
+
+.project-photo {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-tech {
+  padding: 1rem;
+  margin: 0;
+  color: var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.project-details {
+  padding: 1rem;
+}
+
+.project-heading {
+  color: white;
+}
+.project-description {
+  color: var(--color-gray);
+}
