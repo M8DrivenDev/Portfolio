@@ -20,7 +20,7 @@ const Projects = () => {
         </div>
         <ProjectCard
           imgSrc="./vox-mail.png"
-          heading="Pipeline"
+          heading="Vox Mail"
           desc="AI Brand Manager that negotiate and make deals on your behalf"
           projectTech="Nextjs React Tailwindcss websockets next-auth"
           viewMore={false}

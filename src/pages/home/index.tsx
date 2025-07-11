@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar";
 import Projects from "../../components/projects";
 import Quote from "../../components/quote";
 import SideLinks from "../../components/sideLinks";
+import SkillsSection from "../../components/skills";
 import "./index.css";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
         <Hero />
         <Quote />
         <Projects />
+        <SkillsSection />
       </div>
     </>
   );

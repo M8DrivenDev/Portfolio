@@ -32,6 +32,7 @@
 .projects-dots {
   position: absolute;
   left: -3rem;
+  top: 8rem;
 }
 .projects-rect {
   position: absolute;
