@@ -16,9 +16,9 @@ const Hero = () => {
         <h1>
           M8DrivenDev is a{" "}
           <span className="text-primary">
-            Full-Stack Web developer, Software Engineer,
+            Full-Stack Web Developer, Software Engineer,
           </span>{" "}
-          and <span className="text-primary"> content creator</span>
+          and <span className="text-primary">Content Creator</span>
         </h1>
         <p>He crafts responsive websites where technologies meet creativity</p>
         <PrimaryBtn onClick={handleContactClick}>Contact me !!</PrimaryBtn>
