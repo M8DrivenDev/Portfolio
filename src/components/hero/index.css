@@ -1,8 +1,8 @@
 .hero-section {
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin: 2rem 5rem;
+  padding: 0rem 1rem;
 }
 
 .hero-text {
@@ -66,6 +66,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .hero-section {
+    margin: 2rem 2rem;
+  }
   .hero-photo img {
     width: 20rem;
   }
@@ -92,6 +95,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    margin: 2rem 0rem;
   }
   .hero-text {
     width: 100%;

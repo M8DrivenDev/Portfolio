@@ -1,5 +1,6 @@
 import Hero from "../../components/hero";
 import Navbar from "../../components/navbar";
+import Quote from "../../components/quote";
 import SideLinks from "../../components/sideLinks";
 import "./index.css";
 
@@ -18,6 +19,7 @@ const Home = () => {
       </div>
       <div className="container">
         <Hero />
+        <Quote />
       </div>
     </>
   );

@@ -1,0 +1,75 @@
+.quote-section {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  padding: 4rem 2rem;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.quote-container {
+  position: relative;
+  padding: 2rem 3rem;
+  border: 2px solid var(--color-gray);
+  width: 60%;
+  max-width: 600px;
+  background-color: transparent;
+}
+
+.opening-quote {
+  position: absolute;
+  top: -23px;
+  left: 20px;
+  font-size: 3rem;
+  color: var(--color-gray);
+  background-color: var(--color-bg);
+  padding: 0 5px;
+}
+
+.closing-quote {
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  font-size: 3rem;
+  color: var(--color-gray);
+  background-color: var(--color-bg);
+  padding: 0 5px;
+}
+
+.quote-text {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.quote-author {
+  border: 2px solid var(--color-gray);
+  border-top: 0;
+  width: auto;
+  min-width: 120px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+}
+
+.quote-author p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.quote-rect {
+  position: absolute;
+  z-index: -1;
+  right: -2rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .quote-rect {
+    right: -3rem;
+  }
+}
