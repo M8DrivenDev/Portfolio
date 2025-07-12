@@ -1,4 +1,5 @@
 import {
+  FaDiscord,
   FaGithub,
   FaInstagram,
   FaLinkedin,
@@ -13,6 +14,14 @@ const SideLinks = () => {
   return (
     <div className="side-links">
       <ul className="icons">
+        <li>
+          <a
+            href="https://discordapp.com/users/1381677237333397546"
+            target="_blank"
+          >
+            <FaDiscord />
+          </a>
+        </li>
         <li>
           <a href="https://github.com/M8DrivenDev" target="_blank">
             <FaGithub />

@@ -6,6 +6,7 @@ import SideLinks from "../../components/sideLinks";
 import SkillsSection from "../../components/skills";
 import AboutMe from "../../components/aboutMe";
 import "./index.css";
+import ContactSection from "../../components/contactSection/";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
         <Projects />
         <SkillsSection />
         <AboutMe />
+        <ContactSection />
       </div>
     </>
   );

@@ -44,6 +44,7 @@
   font-size: 1.1rem;
   line-height: 1.5;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .quote-author {
@@ -57,7 +58,6 @@
 
 .quote-author p {
   margin: 0;
-  font-size: 0.9rem;
   text-align: center;
 }
 
