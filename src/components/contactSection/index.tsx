@@ -2,8 +2,6 @@ import {
   FaDiscord,
   FaInstagram,
   FaLinkedin,
-  FaRedditAlien,
-  FaTiktok,
   FaXTwitter,
 } from "react-icons/fa6";
 import Divider from "../ui/divider";
