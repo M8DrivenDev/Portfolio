@@ -1,0 +1,16 @@
+.head-route-container {
+  margin: 2rem 5rem;
+  padding: 1rem 1rem;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .head-route-container {
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .head-route-container {
+    margin: 0;
+  }
+}
