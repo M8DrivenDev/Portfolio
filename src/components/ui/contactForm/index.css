@@ -113,13 +113,12 @@
 }
 
 .status-message.error {
-  color: var(--color-error);
+  color: var(--color-gray);
 }
 
 @media (max-width: 600px) {
   .contact-form-container {
     margin: 0;
-    width: 100%;
   }
   .form-row {
     flex-direction: column;
