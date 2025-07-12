@@ -4,6 +4,7 @@ import Projects from "../../components/projects";
 import Quote from "../../components/quote";
 import SideLinks from "../../components/sideLinks";
 import SkillsSection from "../../components/skills";
+import AboutMe from "../../components/aboutMe";
 import "./index.css";
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
         <Quote />
         <Projects />
         <SkillsSection />
+        <AboutMe />
       </div>
     </>
   );
