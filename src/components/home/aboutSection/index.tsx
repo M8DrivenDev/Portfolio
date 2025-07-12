@@ -1,12 +1,12 @@
-import Divider from "../ui/divider";
-import PrimaryBtn from "../ui/primaryBtn";
+import Divider from "../../ui/divider";
+import PrimaryBtn from "../../ui/primaryBtn";
 import { FaArrowRight } from "react-icons/fa6";
-import "./index.css";
 import { useNavigate } from "react-router-dom";
-import DotBox from "../ui/dotbox/dotbox";
-import { HollowRect } from "../ui/hollowRect";
+import DotBox from "../../ui/dotbox/dotbox";
+import { HollowRect } from "../../ui/hollowRect";
+import "./index.css";
 
-const AboutMe = () => {
+const AboutMeSection = () => {
   const navigate = useNavigate();
   return (
     <div className="about-section">
@@ -54,4 +54,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default AboutMeSection;

@@ -1,7 +1,7 @@
-import Divider from "../ui/divider";
-import DotBox from "../ui/dotbox/dotbox";
-import { HollowRect } from "../ui/hollowRect";
-import SkillBox from "../ui/skillBox";
+import Divider from "../../ui/divider";
+import DotBox from "../../ui/dotbox/dotbox";
+import { HollowRect } from "../../ui/hollowRect";
+import SkillBox from "../../ui/skillBox";
 import "./index.css";
 
 const SkillsSection = () => {

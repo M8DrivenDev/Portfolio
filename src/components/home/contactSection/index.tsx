@@ -4,7 +4,7 @@ import {
   FaLinkedin,
   FaXTwitter,
 } from "react-icons/fa6";
-import Divider from "../ui/divider";
+import Divider from "../../ui/divider";
 import "./index.css";
 import { MdEmail } from "react-icons/md";
 

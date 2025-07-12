@@ -1,9 +1,9 @@
 import "./index.css";
-import PrimaryBtn from "../ui/primaryBtn";
-import DotBox from "../ui/dotbox/dotbox";
+import PrimaryBtn from "../../ui/primaryBtn";
+import DotBox from "../../ui/dotbox/dotbox";
 import { useNavigate } from "react-router-dom";
 
-const Hero = () => {
+const HeroSection = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="primary-color-box"></div>
           <p className="text-gray">
             {" "}
-            Currently working on <span className="text-white">Portfolio</span>
+            Currently working on <span className="text-white">Vox Mail</span>
           </p>
         </div>
       </div>
@@ -43,4 +43,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

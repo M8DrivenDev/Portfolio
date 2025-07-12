@@ -1,3 +1,46 @@
+@font-face {
+  font-family: "FunnelDisplay";
+  src: url("./assets/fonts/FunnelDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FunnelDisplay";
+  src: url("./assets/fonts/FunnelDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FunnelDisplay";
+  src: url("./assets/fonts/FunnelDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FunnelDisplay";
+  src: url("./assets/fonts/FunnelDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FunnelDisplay";
+  src: url("./assets/fonts/FunnelDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FunnelDisplay";
+  src: url("./assets/fonts/FunnelDisplay-ExtraBold.ttf.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,7 +61,7 @@ html {
 body {
   background: var(--color-bg);
   margin: 0;
-  font-family: "Funnel Display", sans-serif;
+  font-family: "FunnelDisplay", sans-serif;
 }
 
 /* Custom Scrollbar Styling */

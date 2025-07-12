@@ -1,6 +1,6 @@
-import { HollowRect } from "../ui/hollowRect";
+import { HollowRect } from "../../ui/hollowRect";
 import "./index.css";
-const Quote = () => {
+const QuoteSection = () => {
   return (
     <div className="quote-section">
       <div className="quote-container">
@@ -18,4 +18,4 @@ const Quote = () => {
   );
 };
 
-export default Quote;
+export default QuoteSection;

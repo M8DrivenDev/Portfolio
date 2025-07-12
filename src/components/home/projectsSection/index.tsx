@@ -1,11 +1,11 @@
-import Divider from "../ui/divider";
-import DotBox from "../ui/dotbox/dotbox";
-import { HollowRect } from "../ui/hollowRect";
-import ProjectCard from "../ui/projectCard";
+import Divider from "../../ui/divider";
+import DotBox from "../../ui/dotbox/dotbox";
+import { HollowRect } from "../../ui/hollowRect";
+import ProjectCard from "../../ui/projectCard";
 import "./index.css";
 import { FaArrowRight } from "react-icons/fa6";
 
-const Projects = () => {
+const ProjectsSection = () => {
   return (
     <div className="projects-section">
       <div className="projects-divider">
@@ -49,4 +49,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsSection;
