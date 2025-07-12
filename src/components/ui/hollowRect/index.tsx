@@ -6,6 +6,7 @@ export interface HollowRectProps {
   color?: string;
   className?: string;
   style?: React.CSSProperties;
+  border?: string;
 }
 
 export const HollowRect: React.FC<HollowRectProps> = ({
@@ -14,6 +15,7 @@ export const HollowRect: React.FC<HollowRectProps> = ({
   color = "var(--color-gray)",
   className,
   style,
+  border = "1px",
   ...rest
 }) => (
   <div
@@ -22,7 +24,7 @@ export const HollowRect: React.FC<HollowRectProps> = ({
     style={{
       width,
       height,
-      border: `1px solid ${color}`,
+      border: `${border} solid ${color}`,
       boxSizing: "border-box",
       ...style,
     }}

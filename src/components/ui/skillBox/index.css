@@ -1,2 +1,14 @@
 .skill-box {
+  border: 1px solid var(--color-gray);
+}
+.skill-box h3 {
+  border-bottom: 1px solid var(--color-gray);
+  padding: 1rem;
+  margin: 0;
+  color: white;
+}
+.skill-box p {
+  padding: 1rem;
+  color: var(--color-gray);
+  margin: 0;
 }

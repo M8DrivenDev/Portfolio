@@ -1,0 +1,144 @@
+.skills-section {
+  padding: 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.skills-divider {
+  margin: 2rem 5rem;
+}
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  margin: 2rem 5rem;
+}
+.skills-shapes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+}
+.skills-logo {
+  width: 15rem;
+}
+.floating-shape-1 {
+  position: absolute;
+  right: 5rem;
+  top: 0;
+}
+.floating-shape-2 {
+  position: absolute;
+  right: 0;
+}
+.floating-shape-3 {
+  position: absolute;
+  left: 5rem;
+  top: 0;
+}
+.floating-shape-4 {
+  position: absolute;
+  left: 10rem;
+  bottom: 0;
+}
+
+.skill-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+.boxes-section-1 {
+  display: flex;
+  gap: 1rem;
+}
+.boxes-section-2 {
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .skills-logo {
+    width: 15rem;
+  }
+  .floating-shape-1 {
+    position: absolute;
+    right: -5rem;
+    top: -3rem;
+  }
+  .floating-shape-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .floating-shape-3 {
+    position: absolute;
+    left: -3rem;
+    top: 0;
+  }
+  .floating-shape-4 {
+    position: absolute;
+    left: 7rem;
+    bottom: -5rem;
+    z-index: -1;
+  }
+  .skills-shapes {
+    width: 100%;
+  }
+  .skill-boxes {
+    width: 100%;
+  }
+  .skills-container {
+    flex-direction: column;
+  }
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-container {
+    margin: 0rem 2rem;
+  }
+  .skills-divider {
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills-logo {
+    width: 10rem;
+  }
+  .floating-shape-1 {
+    position: absolute;
+    right: -5rem;
+    top: -3rem;
+  }
+  .floating-shape-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .floating-shape-3 {
+    position: absolute;
+    left: -3rem;
+    top: 0;
+  }
+  .floating-shape-4 {
+    position: absolute;
+    left: 7rem;
+    bottom: -5rem;
+    z-index: -1;
+  }
+  .skills-shapes {
+    width: 100%;
+  }
+  .skill-boxes {
+    width: 100%;
+  }
+  .skills-container {
+    flex-direction: column;
+  }
+  .skills-divider {
+    margin: 0;
+  }
+  .skills-container {
+    margin: 0rem;
+  }
+}

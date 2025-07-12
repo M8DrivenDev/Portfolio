@@ -8,4 +8,5 @@ export type DotBoxProps = {
   height: number | string;
   dotSize?: number;
   dotSpacing?: number;
+  color?: string;
 };

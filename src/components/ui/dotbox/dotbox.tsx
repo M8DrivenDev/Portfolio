@@ -6,12 +6,13 @@ const DotBox: React.FC<DotBoxProps> = ({
   height,
   dotSize = 4,
   dotSpacing = 10,
+  color = "white",
 }) => {
   const dotStyle: React.CSSProperties = {
     width: dotSize,
     height: dotSize,
     borderRadius: "50%",
-    backgroundColor: "white",
+    backgroundColor: color,
     margin: dotSpacing / 2,
   };
 
