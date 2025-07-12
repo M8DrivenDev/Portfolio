@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="footer-finish">
-          © Copyright {currentYear}. Made by M8DrivenDev
+          &copy; Copyright {currentYear}. Made by M8DrivenDev
         </p>
       </div>
     </footer>

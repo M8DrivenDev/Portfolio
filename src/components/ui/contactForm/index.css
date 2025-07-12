@@ -1,0 +1,127 @@
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--color-gray);
+}
+
+.contact-title {
+  color: var(--color-primary);
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.input-container {
+  position: relative;
+  flex: 1;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 16px 12px 8px 12px;
+  background-color: transparent;
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+  color: var(--color-gray);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.form-label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: var(--color-gray);
+  font-size: 14px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: var(--color-bg);
+  padding: 0 4px;
+}
+
+.form-label.active,
+.form-input:focus + .form-label,
+.form-textarea:focus + .form-label {
+  top: -8px;
+  font-size: 12px;
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.submit-button {
+  align-self: flex-start;
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.submit-button.loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status-message {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.status-message.success {
+  color: var(--color-primary);
+}
+
+.status-message.error {
+  color: var(--color-error);
+}
+
+@media (max-width: 600px) {
+  .contact-form-container {
+    margin: 0;
+    width: 100%;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}

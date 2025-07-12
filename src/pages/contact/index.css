@@ -1,0 +1,25 @@
+.email-me-container {
+  display: flex;
+  margin: 0 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.cta {
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .email-me-container {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .email-me-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .cta {
+    width: 100%;
+  }
+}

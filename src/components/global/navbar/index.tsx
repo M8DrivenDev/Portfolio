@@ -4,10 +4,10 @@ import Hamburger from "../../ui/hamburger";
 import "./index.css";
 
 const navLinks = [
-  { to: "/", label: "home" },
-  { to: "/work", label: "work" },
-  { to: "/about-me", label: "about‑me" },
-  { to: "/contact", label: "contact" },
+  { to: "/", label: "Home" },
+  { to: "/projects", label: "Projects" },
+  { to: "/about-me", label: "About‑Me" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
