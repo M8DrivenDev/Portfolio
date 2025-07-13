@@ -1,5 +1,7 @@
 import {
+  FaBitcoin,
   FaDiscord,
+  FaEthereum,
   FaGithub,
   FaInstagram,
   FaLinkedin,
@@ -10,6 +12,9 @@ import {
 } from "react-icons/fa6";
 import "./index.css";
 import { MdEmail } from "react-icons/md";
+import CopyBtn from "../../ui/copyBtn";
+import { SiSolana } from "react-icons/si";
+
 const Footer = () => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
@@ -25,6 +30,32 @@ const Footer = () => {
             <p className="text-gray">
               Software Engineer and Full-Stack Web Developer
             </p>
+          </div>
+          <div className="footer-mid">
+            <h3 className="text-white">Support Me</h3>
+            <ul className="support-container">
+              <li>
+                <div className="support-item">
+                  <FaBitcoin size={30} />{" "}
+                  <p>bc1qzqz2se9f5p44tnx2ukyq00mjnae78ntkyhlusy</p>
+                </div>
+                <CopyBtn text="bc1qzqz2se9f5p44tnx2ukyq00mjnae78ntkyhlusy" />
+              </li>
+              <li>
+                <div className="support-item">
+                  <FaEthereum size={30} />{" "}
+                  <p>0xe3529f14cd23c6Fd7a9603Ff464838a567823624</p>
+                </div>
+                <CopyBtn text="0xe3529f14cd23c6Fd7a9603Ff464838a567823624" />
+              </li>
+              <li>
+                <div className="support-item">
+                  <SiSolana size={30} />{" "}
+                  <p>FEJxURKJ2TXoeGK3vb4n3x99MoNmr6JztYPZXLXon7er</p>
+                </div>
+                <CopyBtn text="FEJxURKJ2TXoeGK3vb4n3x99MoNmr6JztYPZXLXon7er" />
+              </li>
+            </ul>
           </div>
           <div className="footer-right">
             <h3 className="text-white">Media</h3>

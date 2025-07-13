@@ -5,7 +5,6 @@ import "./index.css";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/projects", label: "Projects" },
   { to: "/about-me", label: "About‑Me" },
   { to: "/contact", label: "Contact" },
 ];

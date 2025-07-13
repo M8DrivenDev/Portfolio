@@ -10,7 +10,7 @@ const ProjectsSection = () => {
     <div className="projects-section">
       <div className="projects-divider">
         <Divider dividerHeading="Projects" />
-        <a href="/projects">
+        <a href="https://github.com/M8DrivenDev" target="_blank">
           View all <FaArrowRight />
         </a>
       </div>
