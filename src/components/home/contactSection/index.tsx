@@ -1,7 +1,6 @@
 import {
   FaDiscord,
   FaInstagram,
-  FaLinkedin,
   FaXTwitter,
 } from "react-icons/fa6";
 import Divider from "../../ui/divider";
@@ -38,11 +37,6 @@ const ContactSection = () => {
                 target="_blank"
               >
                 <MdEmail /> Gmail
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/drivendev/" target="_blank">
-                <FaLinkedin /> Linkedin
               </a>
             </li>
             <li>

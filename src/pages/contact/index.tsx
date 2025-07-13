@@ -1,9 +1,4 @@
-import {
-  FaDiscord,
-  FaInstagram,
-  FaLinkedin,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaDiscord, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import HeadRoute from "../../components/global/headRoute";
 import Navbar from "../../components/global/navbar";
 import SideLinks from "../../components/global/sideLinks";
@@ -70,14 +65,6 @@ const Contact = () => {
                   target="_blank"
                 >
                   <MdEmail /> Gmail
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/drivendev/"
-                  target="_blank"
-                >
-                  <FaLinkedin /> Linkedin
                 </a>
               </li>
               <li>

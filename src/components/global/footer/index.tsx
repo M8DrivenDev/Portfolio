@@ -4,7 +4,6 @@ import {
   FaEthereum,
   FaGithub,
   FaInstagram,
-  FaLinkedin,
   FaRedditAlien,
   FaTiktok,
   FaXTwitter,
@@ -79,14 +78,6 @@ const Footer = () => {
               <li>
                 <a href="https://github.com/M8DrivenDev" target="_blank">
                   <FaGithub />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/drivendev/"
-                  target="_blank"
-                >
-                  <FaLinkedin />
                 </a>
               </li>
               <li>
