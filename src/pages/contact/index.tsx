@@ -15,7 +15,7 @@ import "./index.css";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="contact">
       <div className="header">
         <SideLinks />
         <Navbar />
@@ -74,7 +74,7 @@ const Contact = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/m8drivendev/"
+                  href="https://www.linkedin.com/in/drivendev/"
                   target="_blank"
                 >
                   <FaLinkedin /> Linkedin

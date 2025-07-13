@@ -41,10 +41,7 @@ const ContactSection = () => {
               </a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/m8drivendev/"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/drivendev/" target="_blank">
                 <FaLinkedin /> Linkedin
               </a>
             </li>

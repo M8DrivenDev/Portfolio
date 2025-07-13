@@ -4,10 +4,11 @@ import Navbar from "../../components/global/navbar";
 import SideLinks from "../../components/global/sideLinks";
 import SkillsSection from "../../components/home/skillsSection";
 import DotBox from "../../components/ui/dotbox/dotbox";
+import './index.css'
 
 const AboutMePage = () => {
   return (
-    <div>
+    <div className="about">
       <div className="header">
         <SideLinks />
         <Navbar />
