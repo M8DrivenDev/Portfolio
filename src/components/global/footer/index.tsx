@@ -76,7 +76,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/M8DrivenDev" target="_blank">
+                <a href="https://github.com/m8drivendev" target="_blank">
                   <FaGithub />
                 </a>
               </li>

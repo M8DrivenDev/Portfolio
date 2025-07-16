@@ -10,7 +10,7 @@ const ProjectsSection = () => {
     <div className="projects-section">
       <div className="projects-divider">
         <Divider dividerHeading="Projects" />
-        <a href="https://github.com/M8DrivenDev" target="_blank">
+        <a href="https://github.com/m8drivendev" target="_blank">
           View all <FaArrowRight />
         </a>
       </div>
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
           desc="Whatsapp clone web app"
           projectTech="React Tailwindcss websockets expressjs nodejs"
           viewMore={true}
-          redirectUrl="https://github.com/M8DrivenDev/Pipeline"
+          redirectUrl="https://github.com/m8drivendev/Pipeline"
         />
         <ProjectCard
           imgSrc="./shell-header.png"
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
           desc="This is a simple shell program that allows users to excute commands"
           projectTech="C Programming language"
           viewMore={true}
-          redirectUrl="https://github.com/M8DrivenDev/Gates-Of-Shell"
+          redirectUrl="https://github.com/m8drivendev/Gates-Of-Shell"
         />
         <div className="projects-rect">
           <HollowRect width={100} height={100} />
