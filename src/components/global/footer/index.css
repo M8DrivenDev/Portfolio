@@ -72,6 +72,7 @@ footer {
   align-items: center;
   max-width: 85%;
   gap: 5px;
+  cursor: pointer;
 }
 .support-container li p {
   padding: 0;
@@ -145,7 +146,7 @@ footer {
 
 .footer-right ul li a:hover {
   transform: translateY(-3px) scale(1.1);
-  color: #3b82f6; /* You can customize this color */
+  color: var(--color-primary); /* You can customize this color */
 }
 
 /* Enhanced support items animation */
@@ -178,7 +179,7 @@ footer {
     transition: opacity 0.3s ease;
     transform: none;
   }
-  
+
   .footer-animated.animate-in .animate-item {
     transform: none;
   }
