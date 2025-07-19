@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+# 🌐 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website!  
+Built with **Vite**, **TypeScript**, and **CSS**, this site showcases my work, skills, and contact information.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **[Vite](https://vitejs.dev/)** – Lightning-fast development build tool
+- **TypeScript** – Typed JavaScript for more robust and maintainable code
+- **CSS** – Custom styling without frameworks
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Folder Structure
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+├── public/ # Static assets
+├── src/
+│ ├── assets/ # Fonts
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Individual pages like Home, About, Projects
+│ ├── App.tsx # Root component
+│ ├── main.tsx # Entry point
+├── index.html # Main HTML file
+├── vite.config.ts # Vite configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📸 Features
+
+- ⚡ Fast load times thanks to Vite
+- 🧩 Component-based architecture
+- 🎨 Clean UI built with custom CSS
+- 📱 Responsive design for all devices
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-portfolio.git
+   cd your-portfolio
+````
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+
+   ```bash
+   npm run build
+   ```
+
+## 🌍 Live Demo
+
+[🔗 Visit My Portfolio](https://m8drivendev.netlify.app)
+
+## 📬 Contact
+
+If you'd like to get in touch:
+
+- **Discord**: [discord.com/users/1381677237333397546](https://discord.com/users/1381677237333397546)
+- **X (Twitter)**: [x.com/M8DrivenDev](https://x.com/M8DrivenDev)
+- **Youtube**: [youtube.com/@M8DrivenDev](https://www.youtube.com/@M8DrivenDev)
+- **Instagram**: [instagram.com/m8drivendev/](https://www.instagram.com/m8drivendev/)
+- **TikTok**: [tiktok.com/@drivendev](https://www.tiktok.com/@drivendev)
+- **Email**: [m8.driven.dev@gmail.com](mailto:m8.driven.dev@gmail.com)
+
+---
+
+> Designed and developed by \[M8DrivenDev]
