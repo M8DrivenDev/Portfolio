@@ -105,3 +105,124 @@
     left: 0rem;
   }
 }
+/* Base styles for animation preparation */
+.hero-animate {
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+/* Initial states - elements start invisible and transformed */
+.hero-animate .hero-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-animate .hero-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.hero-animate .hero-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+/* Hero highlight spans */
+.hero-animate .hero-highlight {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease-out 0.6s, transform 0.6s ease-out 0.6s;
+  display: inline-block;
+}
+
+/* Photo section animations */
+.hero-animate .photo-main img {
+  opacity: 0;
+  transform: scale(0.9) translateX(30px);
+  transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+}
+
+.hero-animate .photo-logo {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.8);
+  transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+}
+
+.hero-animate .photo-dots {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.8s ease-out 0.7s, transform 0.8s ease-out 0.7s;
+}
+
+.hero-animate .photo-status {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.9s, transform 0.8s ease-out 0.9s;
+}
+
+/* Animated state - triggered when 'animate-in' class is added */
+.hero-animate.animate-in {
+  opacity: 1;
+}
+
+.hero-animate.animate-in .hero-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-animate.animate-in .hero-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-animate.animate-in .hero-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-animate.animate-in .hero-highlight {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-animate.animate-in .photo-main img {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+.hero-animate.animate-in .photo-logo {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.hero-animate.animate-in .photo-dots {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-animate.animate-in .photo-status {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Performance optimizations */
+.hero-animate * {
+  will-change: transform, opacity;
+}
+
+.hero-animate.animate-in * {
+  will-change: auto; /* Remove will-change after animation completes */
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .hero-animate * {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

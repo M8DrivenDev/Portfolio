@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from 'react';
 import {
   FaBitcoin,
   FaDiscord,
@@ -15,13 +16,39 @@ import CopyBtn from "../../ui/copyBtn";
 import { SiSolana } from "react-icons/si";
 
 const Footer = () => {
+  const footerRef = useRef(null);
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
+
+  useEffect(() => {
+    const footer = footerRef.current;
+    if (!footer) return;
+
+    // Intersection Observer for performance-optimized scroll animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer>
+    <footer ref={footerRef} className="footer-animated">
       <div className="footer-container">
         <div className="footer-text-container">
-          <div className="footer-left">
+          <div className="footer-left animate-item" style={{ '--delay': '0.1s' }}>
             <div className="nav-logo-container">
               <img src="./logo-white.svg" alt="logo" className="nav-logo" />
               <a href="/">M8DrivenDev</a>
@@ -30,24 +57,24 @@ const Footer = () => {
               Software Engineer and Full-Stack Web Developer
             </p>
           </div>
-          <div className="footer-mid">
+          <div className="footer-mid animate-item" style={{ '--delay': '0.2s' }}>
             <h3 className="text-white">Support Me</h3>
             <ul className="support-container">
-              <li>
+              <li className="animate-item" style={{ '--delay': '0.3s' }}>
                 <div className="support-item">
                   <FaBitcoin size={30} />{" "}
                   <p>bc1qzqz2se9f5p44tnx2ukyq00mjnae78ntkyhlusy</p>
                 </div>
                 <CopyBtn text="bc1qzqz2se9f5p44tnx2ukyq00mjnae78ntkyhlusy" />
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '0.4s' }}>
                 <div className="support-item">
                   <FaEthereum size={30} />{" "}
                   <p>0xe3529f14cd23c6Fd7a9603Ff464838a567823624</p>
                 </div>
                 <CopyBtn text="0xe3529f14cd23c6Fd7a9603Ff464838a567823624" />
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '0.5s' }}>
                 <div className="support-item">
                   <SiSolana size={30} />{" "}
                   <p>FEJxURKJ2TXoeGK3vb4n3x99MoNmr6JztYPZXLXon7er</p>
@@ -56,10 +83,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="footer-right">
+          <div className="footer-right animate-item" style={{ '--delay': '0.6s' }}>
             <h3 className="text-white">Media</h3>
             <ul>
-              <li>
+              <li className="animate-item" style={{ '--delay': '0.7s' }}>
                 <a
                   href="mailto:m8.driven.dev@gmail.com?subject=Let's%20Connect&body=Hi%20there!%20I%20wanted%20to%20reach%20out..."
                   target="_blank"
@@ -67,7 +94,7 @@ const Footer = () => {
                   <MdEmail />
                 </a>
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '0.8s' }}>
                 <a
                   href="https://discordapp.com/users/1381677237333397546"
                   target="_blank"
@@ -75,17 +102,17 @@ const Footer = () => {
                   <FaDiscord />
                 </a>
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '0.9s' }}>
                 <a href="https://github.com/m8drivendev" target="_blank">
                   <FaGithub />
                 </a>
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '1.0s' }}>
                 <a href="https://x.com/M8DrivenDev" target="_blank">
                   <FaXTwitter />
                 </a>
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '1.1s' }}>
                 <a
                   href="https://www.instagram.com/m8drivendev/"
                   target="_blank"
@@ -93,12 +120,12 @@ const Footer = () => {
                   <FaInstagram />
                 </a>
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '1.2s' }}>
                 <a href="https://www.tiktok.com/@drivendev" target="_blank">
                   <FaTiktok />
                 </a>
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '1.3s' }}>
                 <a
                   href="https://www.reddit.com/user/M8DrivenDev/"
                   target="_blank"
@@ -106,7 +133,7 @@ const Footer = () => {
                   <FaRedditAlien />
                 </a>
               </li>
-              <li>
+              <li className="animate-item" style={{ '--delay': '1.4s' }}>
                 <a href="https://www.youtube.com/@M8DrivenDev" target="_blank">
                   <FaYoutube />
                 </a>
@@ -114,7 +141,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <p className="footer-finish">
+        <p className="footer-finish animate-item" style={{ '--delay': '1.5s' }}>
           &copy; Copyright {currentYear}. Made by M8DrivenDev
         </p>
       </div>

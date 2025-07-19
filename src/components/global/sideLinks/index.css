@@ -50,3 +50,172 @@
     display: none;
   }
 }
+
+/* Base styles for animation preparation */
+.side-links-animate {
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+/* Initial states - each icon starts with different transforms */
+.side-links-animate .icon-item {
+  opacity: 0;
+  transform: translateX(-50px) scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Staggered delays based on data-index */
+.side-links-animate .icon-item[data-index="0"] {
+  transition-delay: 0.1s;
+}
+
+.side-links-animate .icon-item[data-index="1"] {
+  transition-delay: 0.2s;
+}
+
+.side-links-animate .icon-item[data-index="2"] {
+  transition-delay: 0.3s;
+}
+
+.side-links-animate .icon-item[data-index="3"] {
+  transition-delay: 0.4s;
+}
+
+.side-links-animate .icon-item[data-index="4"] {
+  transition-delay: 0.5s;
+}
+
+.side-links-animate .icon-item[data-index="5"] {
+  transition-delay: 0.6s;
+}
+
+.side-links-animate .icon-item[data-index="6"] {
+  transition-delay: 0.7s;
+}
+
+/* Animated state - triggered when 'animate-in' class is added */
+.side-links-animate.animate-in {
+  opacity: 1;
+}
+
+.side-links-animate.animate-in .icon-item {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Enhanced hover effects after animation */
+.side-links-animate.animate-in .icon-item a {
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover animations for each platform with brand colors */
+.side-links-animate.animate-in .icon-item:hover a {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* Platform-specific hover colors */
+.side-links-animate.animate-in .icon-item[data-index="0"]:hover a {
+  color: #5865f2; /* Discord */
+  box-shadow: 0 5px 15px rgba(88, 101, 242, 0.4);
+}
+
+.side-links-animate.animate-in .icon-item[data-index="1"]:hover a {
+  color: #333; /* GitHub */
+  box-shadow: 0 5px 15px rgba(51, 51, 51, 0.4);
+}
+
+.side-links-animate.animate-in .icon-item[data-index="2"]:hover a {
+  color: #1da1f2; /* Twitter/X */
+  box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
+}
+
+.side-links-animate.animate-in .icon-item[data-index="3"]:hover a {
+  color: #e4405f; /* Instagram */
+  box-shadow: 0 5px 15px rgba(228, 64, 95, 0.4);
+}
+
+.side-links-animate.animate-in .icon-item[data-index="4"]:hover a {
+  color: #ff0050; /* TikTok */
+  box-shadow: 0 5px 15px rgba(255, 0, 80, 0.4);
+}
+
+.side-links-animate.animate-in .icon-item[data-index="5"]:hover a {
+  color: #ff4500; /* Reddit */
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+}
+
+.side-links-animate.animate-in .icon-item[data-index="6"]:hover a {
+  color: #ff0000; /* YouTube */
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Ripple effect on click */
+.side-links-animate.animate-in .icon-item a:active {
+  transform: translateY(-1px) scale(0.95);
+}
+
+/* Subtle breathing animation for all icons after load */
+.side-links-animate.animate-in .icon-item {
+  animation: breathe 4s ease-in-out infinite;
+  animation-delay: calc(var(--index, 0) * 0.2s + 1s);
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(2px) scale(1.02);
+  }
+}
+
+/* Wave effect using CSS custom properties */
+.side-links-animate .icon-item[data-index="0"] { --index: 0; }
+.side-links-animate .icon-item[data-index="1"] { --index: 1; }
+.side-links-animate .icon-item[data-index="2"] { --index: 2; }
+.side-links-animate .icon-item[data-index="3"] { --index: 3; }
+.side-links-animate .icon-item[data-index="4"] { --index: 4; }
+.side-links-animate .icon-item[data-index="5"] { --index: 5; }
+.side-links-animate .icon-item[data-index="6"] { --index: 6; }
+
+/* Focus states for accessibility */
+.side-links-animate.animate-in .icon-item a:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Performance optimizations */
+.side-links-animate * {
+  will-change: transform, opacity;
+}
+
+.side-links-animate.animate-in * {
+  will-change: auto; /* Remove will-change after initial animation completes */
+}
+
+/* Keep hover and breathing animations optimized */
+.side-links-animate.animate-in .icon-item {
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .side-links-animate,
+  .side-links-animate * {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  
+  .side-links-animate.animate-in .icon-item:hover a {
+    transform: none !important;
+  }
+}

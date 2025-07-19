@@ -54,3 +54,244 @@
     margin: 0;
   }
 }
+/* Base styles - items start invisible and transformed */
+.contact-section .animate-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* Special animation for contact text - slide from left */
+.contact-section .contact-text {
+  transform: translateX(-40px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Social media items get special slide-in from right with stagger */
+.contact-section .social-item {
+  transform: translateX(50px) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Icons get a slight rotation for dynamic effect */
+.contact-section .social-item a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transform: rotate(-2deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Message Me header gets a subtle glow effect */
+.contact-section .text-white {
+  transform: translateY(20px) scale(0.98);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(0.9);
+}
+
+/* When section comes into view, trigger animations */
+.contact-section.animate-in .animate-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-section.animate-in .contact-text {
+  transform: translateX(0);
+}
+
+.contact-section.animate-in .social-item {
+  transform: translateX(0) scale(1);
+}
+
+.contact-section.animate-in .social-item a {
+  transform: rotate(0deg);
+}
+
+.contact-section.animate-in .text-white {
+  transform: translateY(0) scale(1);
+  filter: brightness(1);
+}
+
+/* Staggered delay system */
+.contact-section.animate-in .animate-item[data-delay="0"] {
+  transition-delay: 0ms;
+}
+
+.contact-section.animate-in .animate-item[data-delay="100"] {
+  transition-delay: 100ms;
+}
+
+.contact-section.animate-in .animate-item[data-delay="200"] {
+  transition-delay: 200ms;
+}
+
+.contact-section.animate-in .animate-item[data-delay="300"] {
+  transition-delay: 300ms;
+}
+
+.contact-section.animate-in .animate-item[data-delay="350"] {
+  transition-delay: 350ms;
+}
+
+.contact-section.animate-in .animate-item[data-delay="400"] {
+  transition-delay: 400ms;
+}
+
+.contact-section.animate-in .animate-item[data-delay="450"] {
+  transition-delay: 450ms;
+}
+
+/* Continuous subtle animations after initial reveal */
+@keyframes gentle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes icon-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-2px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-1px) rotate(-0.5deg);
+  }
+}
+
+@keyframes text-glow {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+}
+
+/* Apply continuous animations after initial animation completes */
+.contact-section.animate-in .text-white {
+  animation: text-glow 4s ease-in-out infinite 1s;
+}
+
+/* Individual icon animations with different timings */
+.contact-section.animate-in .social-item:nth-child(1) svg {
+  animation: icon-float 3s ease-in-out infinite 1.2s;
+}
+
+.contact-section.animate-in .social-item:nth-child(2) svg {
+  animation: icon-float 3.5s ease-in-out infinite 1.4s;
+}
+
+.contact-section.animate-in .social-item:nth-child(3) svg {
+  animation: icon-float 2.8s ease-in-out infinite 1.6s;
+}
+
+.contact-section.animate-in .social-item:nth-child(4) svg {
+  animation: icon-float 3.2s ease-in-out infinite 1.8s;
+}
+
+/* Enhanced hover effects for social links */
+.contact-section.animate-in .social-item a:hover {
+  transform: translateY(-3px) scale(1.05) rotate(2deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contact-section.animate-in .social-item a:hover svg {
+  transform: scale(1.1) rotate(5deg);
+  transition: all 0.3s ease;
+}
+
+/* Staggered hover delay for smooth interaction */
+.contact-section.animate-in .social-item:nth-child(1) a:hover {
+  transition-delay: 0ms;
+}
+
+.contact-section.animate-in .social-item:nth-child(2) a:hover {
+  transition-delay: 50ms;
+}
+
+.contact-section.animate-in .social-item:nth-child(3) a:hover {
+  transition-delay: 100ms;
+}
+
+.contact-section.animate-in .social-item:nth-child(4) a:hover {
+  transition-delay: 150ms;
+}
+
+/* Focus states for accessibility */
+.contact-section.animate-in .social-item a:focus {
+  outline: 2px solid var(--color-primary, #007acc);
+  outline-offset: 2px;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Performance optimizations */
+.contact-section {
+  transform: translateZ(0); /* Create stacking context for GPU acceleration */
+}
+
+.contact-section .animate-item {
+  backface-visibility: hidden; /* Prevent flickering */
+}
+
+/* Remove will-change after animation completes to free up GPU resources */
+.contact-section.animate-in .animate-item {
+  will-change: auto;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .contact-section .animate-item,
+  .contact-section .contact-text,
+  .contact-section .social-item,
+  .contact-section .text-white {
+    transition-duration: 0.3s;
+    animation: none !important;
+  }
+
+  .contact-section .social-item a {
+    transition-duration: 0.2s;
+  }
+
+  .contact-section.animate-in .social-item a:hover,
+  .contact-section.animate-in .social-item a:focus {
+    transform: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .contact-section .animate-item {
+    transition-duration: 0.5s;
+  }
+
+  .contact-section .social-item {
+    transform: translateY(30px) scale(0.98);
+  }
+
+  .contact-section.animate-in .social-item {
+    transform: translateY(0) scale(1);
+  }
+
+  /* Reduce continuous animations on mobile for battery life */
+  .contact-section.animate-in .text-white,
+  .contact-section.animate-in .social-item svg {
+    animation-duration: 6s;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .contact-section.animate-in .social-item a:hover,
+  .contact-section.animate-in .social-item a:focus {
+    outline: 3px solid currentColor;
+  }
+}

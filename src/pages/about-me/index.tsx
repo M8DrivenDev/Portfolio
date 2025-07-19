@@ -3,8 +3,8 @@ import HeadRoute from "../../components/global/headRoute";
 import Navbar from "../../components/global/navbar";
 import SideLinks from "../../components/global/sideLinks";
 import SkillsSection from "../../components/home/skillsSection";
-import DotBox from "../../components/ui/dotbox/dotbox";
-import './index.css'
+import DotBox from "../../components/ui/dotBox";
+import "./index.css";
 
 const AboutMePage = () => {
   return (

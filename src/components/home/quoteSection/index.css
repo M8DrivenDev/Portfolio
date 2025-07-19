@@ -68,8 +68,137 @@
   overflow: hidden;
 }
 
+/* Base styles for animation preparation */
+.quote-animate {
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+/* Initial states - elements start invisible and transformed */
+.quote-animate .quote-mark {
+  opacity: 0;
+  transform: scale(0.5) rotate(15deg);
+  transition: opacity 0.6s ease-out,
+    transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.quote-animate .opening-quote {
+  transition-delay: 0.1s;
+}
+
+.quote-animate .closing-quote {
+  transition-delay: 1s;
+}
+
+.quote-animate .quote-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+}
+
+.quote-animate .quote-rect {
+  opacity: 0;
+  transform: translateX(-30px) rotate(-5deg);
+  transition: opacity 0.7s ease-out 0.5s, transform 0.7s ease-out 0.5s;
+}
+
+.quote-animate .quote-author {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out 1s, transform 0.6s ease-out 1s;
+}
+
+/* Animated state - triggered when 'animate-in' class is added */
+.quote-animate.animate-in {
+  opacity: 1;
+}
+
+.quote-animate.animate-in .quote-mark {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.quote-animate.animate-in .quote-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-animate.animate-in .quote-rect {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.quote-animate.animate-in .quote-author {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typing effect for quote text (optional enhancement) */
+.quote-animate.animate-in .quote-text {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typewriter 1.5s steps(40) 0.4s forwards;
+}
+
+@keyframes typewriter {
+  to {
+    width: 100%;
+  }
+}
+
+/* Subtle floating animation for quote marks */
+.quote-animate.animate-in .quote-mark {
+  animation: float 3s ease-in-out 1.2s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-3px) scale(1.05);
+  }
+}
+
+/* Performance optimizations */
+.quote-animate * {
+  will-change: transform, opacity;
+}
+
+.quote-animate.animate-in * {
+  will-change: auto; /* Remove will-change after initial animation completes */
+}
+
+/* Keep infinite animations optimized */
+.quote-animate.animate-in .quote-mark,
+.quote-animate.animate-in .quote-rect {
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .quote-animate,
+  .quote-animate * {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .quote-animate .quote-text {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .quote-rect {
     right: -3rem;
+  }
+  .quote-animate.animate-in .quote-text {
+    width: auto !important;
+    white-space: normal !important;
+    animation: none !important;
   }
 }

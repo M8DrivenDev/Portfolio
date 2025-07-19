@@ -142,3 +142,144 @@
     margin: 0rem;
   }
 }
+
+/* Base styles - items start invisible and transformed */
+.skills-section .animate-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity; /* Optimize for animations */
+}
+
+/* Floating shapes get additional rotation for more dynamic effect */
+.skills-section .floating-logo,
+.skills-section .floating-shape-1,
+.skills-section .floating-shape-2,
+.skills-section .floating-shape-3,
+.skills-section .floating-shape-4 {
+  transform: translateY(30px) rotate(-5deg) scale(0.9);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* When section comes into view, trigger staggered animations */
+.skills-section.animate-in .animate-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-section.animate-in .floating-logo,
+.skills-section.animate-in .floating-shape-1,
+.skills-section.animate-in .floating-shape-2,
+.skills-section.animate-in .floating-shape-3,
+.skills-section.animate-in .floating-shape-4 {
+  transform: translateY(0) rotate(0deg) scale(1);
+}
+
+/* Staggered delay system using CSS custom properties */
+.skills-section.animate-in .animate-item[data-delay="0"] {
+  transition-delay: 0ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="100"] {
+  transition-delay: 100ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="200"] {
+  transition-delay: 200ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="250"] {
+  transition-delay: 250ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="300"] {
+  transition-delay: 300ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="350"] {
+  transition-delay: 350ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="400"] {
+  transition-delay: 400ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="500"] {
+  transition-delay: 500ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="550"] {
+  transition-delay: 550ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="600"] {
+  transition-delay: 600ms;
+}
+
+.skills-section.animate-in .animate-item[data-delay="650"] {
+  transition-delay: 650ms;
+}
+
+/* Continuous floating animation for shapes after initial animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-4px) rotate(-0.5deg);
+  }
+}
+
+/* Apply floating animation after initial animation completes */
+.skills-section.animate-in .floating-logo {
+  animation: float 6s ease-in-out infinite 1s;
+}
+
+.skills-section.animate-in .floating-shape-1 {
+  animation: float 7s ease-in-out infinite 1.2s;
+}
+
+.skills-section.animate-in .floating-shape-2 {
+  animation: float 5s ease-in-out infinite 1.4s;
+}
+
+.skills-section.animate-in .floating-shape-3 {
+  animation: float 8s ease-in-out infinite 1.6s;
+}
+
+.skills-section.animate-in .floating-shape-4 {
+  animation: float 6.5s ease-in-out infinite 1.8s;
+}
+
+/* Performance optimizations */
+.skills-section {
+  transform: translateZ(0); /* Create stacking context for GPU acceleration */
+}
+
+.skills-section .animate-item {
+  backface-visibility: hidden; /* Prevent flickering */
+}
+
+/* Remove will-change after animation completes to free up GPU resources */
+.skills-section.animate-in .animate-item {
+  will-change: auto;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .skills-section .animate-item,
+  .skills-section .floating-logo,
+  .skills-section .floating-shape-1,
+  .skills-section .floating-shape-2,
+  .skills-section .floating-shape-3,
+  .skills-section .floating-shape-4 {
+    transition-duration: 0.3s;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

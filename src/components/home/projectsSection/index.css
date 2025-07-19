@@ -65,3 +65,245 @@
     align-items: center;
   }
 }
+
+/* Base styles for animation preparation */
+.projects-animate {
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+/* Divider Section Animation */
+.projects-animate .animate-divider {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.8s ease-out 0.1s, transform 0.8s ease-out 0.1s;
+}
+
+.projects-animate .divider-wrapper {
+  transform: translateX(-20px);
+  transition: transform 0.6s ease-out 0.2s;
+}
+
+.projects-animate .view-all-link {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;
+}
+
+/* Link arrow animation */
+.projects-animate .link-arrow {
+  display: inline-block;
+  transform: translateX(-10px);
+  transition: transform 0.4s ease-out 0.4s;
+}
+
+/* Dots Animation */
+.projects-animate .animate-dots {
+  opacity: 0;
+  transform: scale(0.8) rotate(-10deg);
+  transition: opacity 0.7s ease-out 0.5s, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+/* Project Cards Staggered Animation */
+.projects-animate .project-card-wrapper {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.projects-animate .project-card-wrapper[data-index="0"] {
+  transition-delay: 0.6s;
+}
+
+.projects-animate .project-card-wrapper[data-index="1"] {
+  transition-delay: 0.8s;
+}
+
+.projects-animate .project-card-wrapper[data-index="2"] {
+  transition-delay: 1.0s;
+}
+
+/* Rectangle Animation */
+.projects-animate .animate-rect {
+  opacity: 0;
+  transform: translateX(30px) rotate(15deg) scale(0.7);
+  transition: opacity 0.7s ease-out 1.2s, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s;
+}
+
+/* Animated States */
+.projects-animate.animate-in {
+  opacity: 1;
+}
+
+.projects-animate.animate-in .animate-divider {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-animate.animate-in .divider-wrapper {
+  transform: translateX(0);
+}
+
+.projects-animate.animate-in .view-all-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.projects-animate.animate-in .link-arrow {
+  transform: translateX(0);
+}
+
+.projects-animate.animate-in .animate-dots {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.projects-animate.animate-in .project-card-wrapper {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.projects-animate.animate-in .animate-rect {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg) scale(1);
+}
+
+/* Enhanced Hover Effects for View All Link */
+.projects-animate.animate-in .view-all-link a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.projects-animate.animate-in .view-all-link a:hover {
+  transform: translateX(3px);
+}
+
+.projects-animate.animate-in .view-all-link a:hover .link-arrow {
+  transform: translateX(5px);
+  animation: arrowPulse 0.6s ease infinite alternate;
+}
+
+@keyframes arrowPulse {
+  0% {
+    transform: translateX(5px) scale(1);
+  }
+  100% {
+    transform: translateX(7px) scale(1.1);
+  }
+}
+
+/* Project Cards Hover Enhancement */
+.projects-animate.animate-in .project-card-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-animate.animate-in .project-card-wrapper:hover {
+  transform: translateY(-5px) scale(1.02);
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
+}
+
+/* Subtle Floating Animations */
+.projects-animate.animate-in .animate-dots {
+  animation: floatDots 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.projects-animate.animate-in .animate-rect {
+  animation: floatRect 5s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes floatDots {
+  0%, 100% {
+    transform: scale(1) rotate(0deg) translateY(0px);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg) translateY(-3px);
+  }
+}
+
+@keyframes floatRect {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateX(2px) rotate(1deg) scale(1.02);
+  }
+  75% {
+    transform: translateX(-2px) rotate(-1deg) scale(1.02);
+  }
+}
+
+/* Subtle breathing effect for project cards */
+.projects-animate.animate-in .project-card-wrapper {
+  animation: breatheCard 6s ease-in-out infinite;
+}
+
+.projects-animate.animate-in .project-card-wrapper[data-index="0"] {
+  animation-delay: 3s;
+}
+
+.projects-animate.animate-in .project-card-wrapper[data-index="1"] {
+  animation-delay: 3.5s;
+}
+
+.projects-animate.animate-in .project-card-wrapper[data-index="2"] {
+  animation-delay: 4s;
+}
+
+@keyframes breatheCard {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+/* Focus states for accessibility */
+.projects-animate.animate-in .view-all-link a:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  transform: translateX(2px);
+}
+
+.projects-animate.animate-in .project-card-wrapper:focus-within {
+  transform: translateY(-3px) scale(1.01);
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+/* Performance optimizations */
+.projects-animate * {
+  will-change: transform, opacity;
+}
+
+.projects-animate.animate-in * {
+  will-change: auto;
+}
+
+/* Keep continuous animations optimized */
+.projects-animate.animate-in .animate-dots,
+.projects-animate.animate-in .animate-rect,
+.projects-animate.animate-in .project-card-wrapper {
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .projects-animate,
+  .projects-animate * {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  
+  .projects-animate.animate-in .view-all-link a:hover,
+  .projects-animate.animate-in .project-card-wrapper:hover {
+    transform: none !important;
+  }
+}
