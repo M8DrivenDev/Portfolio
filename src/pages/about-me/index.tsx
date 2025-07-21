@@ -14,9 +14,9 @@ const AboutMePage = () => {
         <Navbar />
       </div>
       <HeadRoute heading="About-Me" subHeading="Who Am I?" />
-      <div className="about-section">
-        <div className="about-container">
-          <div className="about-text-container">
+      <div className="about-page-section">
+        <div className="about-page-container">
+          <div className="about-page-text-container">
             <h4 className="text-primary">Hello, I’m M8DrivenDev!</h4>
             <p className="text-gray">
               I'm a self-taught full-stack developer and software engineer with

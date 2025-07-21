@@ -50,27 +50,6 @@
   position: absolute;
 }
 
-@media screen and (max-width: 1024px) {
-  .about-container {
-    margin: 0 2rem;
-  }
-  .about-square {
-    left: -11rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .about-container {
-    flex-direction: column;
-    margin: 0;
-  }
-  .about-square {
-    display: none;
-  }
-  .about-text-container {
-    width: 100%;
-  }
-}
-
 /* Base styles - items start invisible and transformed */
 .about-section .animate-item {
   opacity: 0;
@@ -180,18 +159,35 @@
 
 /* Continuous subtle animations after initial reveal */
 @keyframes gentle-float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-5px) rotate(1deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
 }
 
 @keyframes pulse-dots {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.02); opacity: 0.9; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
 }
 
 @keyframes subtle-glow {
-  0%, 100% { filter: brightness(1); }
-  50% { filter: brightness(1.05); }
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.05);
+  }
 }
 
 /* Apply continuous animations after initial animation completes */
@@ -240,19 +236,37 @@
     transition-duration: 0.3s;
     animation: none !important;
   }
-  
+
   .about-section .text-primary,
   .about-section .text-gray {
     transition-duration: 0.3s;
   }
 }
 
-/* Additional performance boost for mobile */
-@media (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
+  .about-container {
+    margin: 0 2rem;
+  }
+  .about-square {
+    left: -11rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .about-square {
+    display: none;
+  }
+  .about-text-container {
+    width: 100%;
+  }
   .about-section .animate-item {
     transition-duration: 0.5s;
   }
-  
+
   .about-section.animate-in .about-square,
   .about-section.animate-in .photo-dots-1,
   .about-section.animate-in .photo-dots-2,
