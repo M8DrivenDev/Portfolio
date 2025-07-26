@@ -3,12 +3,14 @@ import {
   FaGithub,
   FaInstagram,
   FaRedditAlien,
+  FaSquareUpwork,
   FaTiktok,
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
 import "./index.css";
 import { useEffect, useRef } from "react";
+import { TbBrandFiverr } from "react-icons/tb";
 
 const SideLinks = () => {
   const sideLinksRef = useRef(null);
@@ -23,7 +25,7 @@ const SideLinks = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Add animation class when section comes into view
-            entry.target.classList.add('animate-in');
+            entry.target.classList.add("animate-in");
             // Disconnect observer after first animation to save resources
             observer.unobserve(entry.target);
           }
@@ -33,7 +35,7 @@ const SideLinks = () => {
         // Trigger when 30% of the section is visible
         threshold: 0.3,
         // Start animation when element is about to enter viewport
-        rootMargin: '0px 0px -20px 0px'
+        rootMargin: "0px 0px -20px 0px",
       }
     );
 
@@ -48,10 +50,7 @@ const SideLinks = () => {
   }, []);
 
   return (
-    <div 
-      ref={sideLinksRef}
-      className="side-links side-links-animate"
-    >
+    <div ref={sideLinksRef} className="side-links side-links-animate">
       <ul className="icons">
         <li className="icon-item" data-index="0">
           <a
@@ -63,33 +62,75 @@ const SideLinks = () => {
           </a>
         </li>
         <li className="icon-item" data-index="1">
-          <a href="https://github.com/m8drivendev" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/m8drivendev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
           </a>
         </li>
         <li className="icon-item" data-index="2">
-          <a href="https://x.com/M8DrivenDev" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://x.com/M8DrivenDev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaXTwitter />
           </a>
         </li>
         <li className="icon-item" data-index="3">
-          <a href="https://www.instagram.com/m8drivendev/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/m8drivendev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
           </a>
         </li>
         <li className="icon-item" data-index="4">
-          <a href="https://www.tiktok.com/@drivendev" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.tiktok.com/@drivendev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTiktok />
           </a>
         </li>
         <li className="icon-item" data-index="5">
-          <a href="https://www.reddit.com/user/M8DrivenDev/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.reddit.com/user/M8DrivenDev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaRedditAlien />
           </a>
         </li>
         <li className="icon-item" data-index="6">
-          <a href="https://www.youtube.com/@M8DrivenDev" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.youtube.com/@M8DrivenDev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaYoutube />
+          </a>
+        </li>
+        <li className="icon-item" data-index="7">
+          <a
+            href="https://www.upwork.com/freelancers/~01ab47d9643d4bb7d5?mp_source=share"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaSquareUpwork />
+          </a>
+        </li>
+        <li className="icon-item" data-index="8">
+          <a
+            href="hhttps://www.fiverr.com/m8drivendev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TbBrandFiverr />
           </a>
         </li>
       </ul>

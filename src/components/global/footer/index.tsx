@@ -6,6 +6,7 @@ import {
   FaGithub,
   FaInstagram,
   FaRedditAlien,
+  FaSquareUpwork,
   FaTiktok,
   FaXTwitter,
   FaYoutube,
@@ -14,6 +15,7 @@ import "./index.css";
 import { MdEmail } from "react-icons/md";
 import CopyBtn from "../../ui/copyBtn";
 import { SiSolana } from "react-icons/si";
+import { TbBrandFiverr } from "react-icons/tb";
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -198,6 +200,24 @@ const Footer = () => {
               >
                 <a href="https://www.youtube.com/@M8DrivenDev" target="_blank">
                   <FaYoutube />
+                </a>
+              </li>
+              <li className="icon-item" data-index="7">
+                <a
+                  href="https://www.upwork.com/freelancers/~01ab47d9643d4bb7d5?mp_source=share"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSquareUpwork />
+                </a>
+              </li>
+              <li className="icon-item" data-index="8">
+                <a
+                  href="hhttps://www.fiverr.com/m8drivendev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TbBrandFiverr />
                 </a>
               </li>
             </ul>
